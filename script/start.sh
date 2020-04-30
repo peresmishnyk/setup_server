@@ -1,4 +1,5 @@
-git pull
+cd $(dirname "$SCRIPT")/.. && git pull && cd $(dirname "$SCRIPT")
+
 read -p "Install ZSH? [y,n]" -n 1 doit
 case $doit in
   y|Y) ./install_zsh.sh ;;
