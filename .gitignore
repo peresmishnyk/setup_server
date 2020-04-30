@@ -2,3 +2,4 @@
 .cache/
 .profile
 .ssh/
+.cloud-locale-test.skip
