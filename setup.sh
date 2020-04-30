@@ -1,4 +1,3 @@
-git config --global user.email "michkire@gmail.com"
 if [ -d "~/.git" ]; then
   echo "Skip init repo"
 else
