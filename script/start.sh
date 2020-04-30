@@ -4,4 +4,6 @@ case $doit in
   y|Y) ./install_zsh.sh ;;
   *) echo skip ;;
 esac
+
+echo Hello!!!
 cd ~
