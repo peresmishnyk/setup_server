@@ -1,1 +1,1 @@
-echo "~/setup/start.sh" >> ~/.bashrc
+echo "~/setup/script/start.sh" >> ~/.bashrc
