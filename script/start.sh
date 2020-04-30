@@ -1,8 +1,7 @@
-read -p "Install? [y,n]" -n 1 doit
+git pull
+read -p "Install ZSH? [y,n]" -n 1 doit
 case $doit in
-  y|Y) echo yes ;;
-  n|N) echo no ;;
-  *) echo dont know ;;
+  y|Y) ./install_zsh.sh ;;
+  *) echo skip ;;
 esac
-#./install.sh
 cd ~
