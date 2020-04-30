@@ -10,3 +10,4 @@ case $doit in
 esac
 
 cd ~
+echo $NEED_RELOAD_SESSION

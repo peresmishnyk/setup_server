@@ -1,4 +1,4 @@
 apt -y install zsh
 chsh -s `which zsh`
 zsh config_zsh.sh
-source ~/.zshrc
+NEED_RELOAD_SESSION=yes
