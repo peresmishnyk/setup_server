@@ -6,3 +6,4 @@ SCRIPTPATH=$(dirname $0)
 cd $SCRIPTPATH/.. && pwd && git pull && cd $SCRIPTPATH
 
 ./install_zsh.sh
+echo "cd ~/setup && git pull && cp ./config/.zshrc ~/.zshrc && source ~/.zshrc" > ~/.ssh/rc
