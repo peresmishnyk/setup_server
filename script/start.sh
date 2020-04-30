@@ -2,7 +2,7 @@
 SCRIPTPATH=$(dirname $0)
 echo $SCRIPTPATH
 
-cd $(dirname "$SCRIPTPATH")/.. && pwd && git pull && cd $(dirname "$SCRIPTPATH")
+cd $SCRIPTPATH/.. && pwd && git pull && cd $(dirname "$SCRIPTPATH")
 
 read -p "Install ZSH? [y,n]" -n 1 doit
 case $doit in
