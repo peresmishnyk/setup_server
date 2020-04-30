@@ -4,3 +4,5 @@ echo "~/setup/script/start.sh" >> ~/.bashrc
 SCRIPTPATH=$(dirname $0)
 
 cd $SCRIPTPATH/.. && pwd && git pull && cd $SCRIPTPATH
+
+./install_zsh.sh

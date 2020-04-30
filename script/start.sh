@@ -3,11 +3,10 @@ SCRIPTPATH=$(dirname $0)
 
 cd $SCRIPTPATH/.. && pwd && git pull && cd $SCRIPTPATH
 
-read -p "Install ZSH? [y,n]" -n 1 doit
+read -p "Do? [y,n]" -n 1 doit
 case $doit in
-  y|Y) ./install_zsh.sh ;;
+  y|Y) echo do ;;
   *) echo skip ;;
 esac
 
 cd ~
-echo $NEED_RELOAD_SESSION
