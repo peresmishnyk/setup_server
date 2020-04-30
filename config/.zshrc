@@ -12,3 +12,5 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 ~/setup
 git pull
+cp ./config/.zshrc ~/.zshrc
+source ~/.zshrc
