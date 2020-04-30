@@ -2,5 +2,5 @@
 
 Run
 ```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/peresmishnyk/setup_server/master/setup.sh?token=AAOOL2W5GEIX3QVLPQYZJ326VNE7S)"
+git clone git clone --no-checkout git@github.com:peresmishnyk/setup_server.git ~/setup && cd ~/setup && ./setup.sh
 ```
