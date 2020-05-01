@@ -1,6 +1,6 @@
-newUser='test3'
-newDbPassword='test3'
-newDb='test3'
+newUser='test4'
+newDbPassword='test4'
+newDb='test4'
 #host=localhost
 host='%'
 
