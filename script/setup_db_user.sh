@@ -1,6 +1,6 @@
-newUser='demodb'
-newDbPassword='demodb'
-newDb='demodb'
+newUser='demodb2'
+newDbPassword='demodb2'
+newDb='demodb2'
 #host=localhost
 host='%'
 
@@ -8,7 +8,7 @@ create_db="CREATE DATABASE \`${newDb}\`;"
 create_user="CREATE USER '${newUser}'@'${host}' IDENTIFIED BY '${newDbPassword}';"
 grant_usage_1="GRANT USAGE ON "
 grant_usage_2=" TO '${newUser}'@'${host}' IDENTIFIED BY '${newDbPassword}';"
-grant_priv="GRANT ALL privileges ON \`${newDb}\`.*TO '${newUser}'@'${host}';"
+grant_priv="GRANT ALL privileges ON \`${newDb}\`.* TO '${newUser}'@'${host}';"
 flush="FLUSH PRIVILEGES;"
 
 
