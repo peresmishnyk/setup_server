@@ -4,7 +4,7 @@ usermod -aG sudo developer
 
 clear
 export PASSWD="linuxpassword"
-echo -e "$PASSWD\n$PASSWD" | passwd developer
+echo -e "linuxpassword\nlinuxpassword" | passwd developer
 
 echo "developer	ALL=(ALL:ALL) NOPASSWD:ALL" > /etc/sudoers.d/developer
 
