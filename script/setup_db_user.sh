@@ -12,7 +12,7 @@ grant_priv="GRANT ALL privileges ON \`${newDb}\`.* TO '${newUser}'@'${host}';"
 flush="FLUSH PRIVILEGES;"
 
 
-echo $create_db | /usr/bin/mysql -u root
+#echo $create_db | /usr/bin/mysql -u root
 echo $create_user | /usr/bin/mysql -u root
 echo $grant_usage_1'*.*'$grant_usage_2 | /usr/bin/mysql -u root
 echo $grant_priv | /usr/bin/mysql -u root

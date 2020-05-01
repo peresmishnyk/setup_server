@@ -15,3 +15,5 @@ cd $SCRIPTPATH && git pull
 ./install_php.sh
 ./add_developer_user.sh
 #echo "cd ~/setup && git pull && cp ./config/.zshrc ~/.zshrc && source ~/.zshrc" > ~/.ssh/rc
+
+echo "TEST=\"my test value\"" >> /etc/environment
