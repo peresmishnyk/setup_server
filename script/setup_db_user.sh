@@ -1,6 +1,6 @@
-newUser='demodb2'
-newDbPassword='demodb2'
-newDb='demodb2'
+newUser='demouser'
+newDbPassword='demopasswd'
+newDb='demodatabase'
 #host=localhost
 host='%'
 
@@ -12,9 +12,14 @@ grant_priv="GRANT ALL privileges ON \`${newDb}\`.* TO '${newUser}'@'${host}';"
 flush="FLUSH PRIVILEGES;"
 
 
-echo $create_db$create_user$grant_usage_1'*.*'$grant_usage_2$grant_priv$flush
-echo $create_db$create_user$grant_usage_1'*.*'$grant_usage_2$grant_priv$flush | /usr/bin/mysql -u root
+echo $create_db | /usr/bin/mysql -u root
+echo $create_user | /usr/bin/mysql -u root
+echo $grant_usage_1'*.*'$grant_usage_2 | /usr/bin/mysql -u root
+echo $grant_priv | /usr/bin/mysql -u root
+echo $flush | /usr/bin/mysql -u root
+
 
 #echo $commands
 
 #CREATE DATABASE `test2`;CREATE USER 'test2'@'%' IDENTIFIED BY 'test2';GRANT USAGE ON *.* TO 'test2'@'%' IDENTIFIED BY 'test2';GRANT ALL privileges ON `test2`.* TO 'test2'@'%';FLUSH PRIVILEGES;
+#CREATE DATABASE `demodb2`;CREATE USER 'demodb2'@'%' IDENTIFIED BY 'demodb2';GRANT USAGE ON *.* TO 'demodb2'@'%' IDENTIFIED BY 'demodb2';GRANT ALL privileges ON `demodb2`.* TO 'demodb2'@'%';FLUSH PRIVILEGES;
