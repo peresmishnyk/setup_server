@@ -1,1 +1,3 @@
-apt -y install nginx-full
+apt -y install nginx
+
+#cp $SCRIPTPATH/../nginx/default
