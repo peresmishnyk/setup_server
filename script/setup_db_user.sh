@@ -1,19 +1,19 @@
-newUser='test33'
-newDbPassword='test33'
-newDb='test33'
+newUser='demodb'
+newDbPassword='demodb'
+newDb='demodb'
 #host=localhost
 host='%'
 
 create_db="CREATE DATABASE \`${newDb}\`;"
 create_user="CREATE USER '${newUser}'@'${host}' IDENTIFIED BY '${newDbPassword}';"
-grant_usage='GRANT USAGE ON *.* TO \'${newUser}\'@\'${host}\' IDENTIFIED BY \'${newDbPassword}\';'
+grant_usage_1="GRANT USAGE ON "
+grant_usage_2=" TO '${newUser}'@'${host}' IDENTIFIED BY '${newDbPassword}';"
 grant_priv="GRANT ALL privileges ON \`${newDb}\`.*TO '${newUser}'@'${host}';"
 flush="FLUSH PRIVILEGES;"
 
-#commands="CREATE DATABASE \`${newDb}\`;CREATE USER '${newUser}'@'${host}' IDENTIFIED BY '${newDbPassword}';GRANT USAGE ON *.* TO '${newUser}'@'${host}' IDENTIFIED BY '${newDbPassword}';GRANT ALL privileges ON \`${newDb}\`.* TO '${newUser}'@'${host}';FLUSH PRIVILEGES;"
 
-echo $create_db$create_user$grant_usage$grant_priv$flush
-echo $create_db$create_user$grant_usage$grant_priv$flush | /usr/bin/mysql -u root
+echo $create_db$create_user$grant_usage_1'*.*'$grant_usage_2$grant_priv$flush
+echo $create_db$create_user$grant_usage_1'*.*'$grant_usage_2$grant_priv$flush | /usr/bin/mysql -u root
 
 #echo $commands
 
