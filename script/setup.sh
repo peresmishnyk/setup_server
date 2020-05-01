@@ -2,6 +2,9 @@
 
 export DEBIAN_FRONTEND=noninteractive
 
+apt -y update
+apt -y upgrade
+
 # Absolute path this script is in, thus /home/user/bin
 export SCRIPTPATH=$(exec 2>/dev/null;cd -- $(dirname "$0"); unset PWD; /usr/bin/pwd || /bin/pwd || pwd)
 
