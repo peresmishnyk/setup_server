@@ -4,7 +4,7 @@ usermod -aG sudo developer
 echo "developer	ALL=(ALL:ALL) NOPASSWD:ALL" > /etc/sudoers.d/developer
 
 
-PASSWD="linuxpassword"
+export PASSWD="linuxpassword"
 echo -e "$PASSWD\n$PASSWD" | passwd developer
 
 mkdir -p /home/developer/.ssh
