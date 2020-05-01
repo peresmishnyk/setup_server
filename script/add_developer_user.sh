@@ -1,12 +1,10 @@
 userdel -r developer
 adduser developer --shell `which zsh` --system --ingroup www-data
 usermod -aG sudo developer
-
-clear
-export PASSWD="linuxpassword"
-`echo -e "linuxpassword\nlinuxpassword" | passwd developer`
-
 echo "developer	ALL=(ALL:ALL) NOPASSWD:ALL" > /etc/sudoers.d/developer
+
+PASSWD=`head /dev/urandom | tr -dc A-Za-z0-9 | head -c 13`
+echo "$PASSWD\n$PASSWD" | passwd developer
 
 mkdir -p /home/developer/.ssh
 cp ~/.ssh/* /home/developer/.ssh
