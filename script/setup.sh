@@ -7,6 +7,6 @@ cd $SCRIPTPATH && git pull
 
 ./install_zsh.sh
 ./install_nginx.sh
-./install_php.sh
-./add_developer_user.sh
+#./install_php.sh
+#./add_developer_user.sh
 #echo "cd ~/setup && git pull && cp ./config/.zshrc ~/.zshrc && source ~/.zshrc" > ~/.ssh/rc
