@@ -3,7 +3,7 @@ adduser developer --shell `which zsh` --system --ingroup www-data
 usermod -aG sudo developer
 echo "developer	ALL=(ALL:ALL) NOPASSWD:ALL" > /etc/sudoers.d/developer
 
-PASSWD=`head /dev/urandom | tr -dc A-Za-z0-9 | head -c 13 ; echo ''`
+PASSWD=`head /dev/urandom | tr -dc A-Za-z0-9 | head -c 13`
 
 echo -e "$PASSWD\n$PASSWD" | passwd developer
 
