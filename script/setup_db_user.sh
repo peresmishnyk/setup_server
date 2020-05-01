@@ -9,4 +9,4 @@ TO '${newUser}'@'${host}';FLUSH PRIVILEGES;"
 
 #echo "${commands}" | /usr/bin/mysql -u root
 
-echo $commands
+echo '$commands'
