@@ -1,4 +1,6 @@
-echo "~/setup/script/start.sh" >> ~/.bashrc
+#echo "~/setup/script/start.sh" >> ~/.bashrc
+
+export DEBIAN_FRONTEND=noninteractive
 
 # Absolute path this script is in, thus /home/user/bin
 export SCRIPTPATH=$(exec 2>/dev/null;cd -- $(dirname "$0"); unset PWD; /usr/bin/pwd || /bin/pwd || pwd)
