@@ -1,7 +1,7 @@
 # Absolute path this script is in, thus /home/user/bin
-SCRIPTPATH=$(cd -P -- "$(dirname -- "$0")" && printf '%s\n' "$(pwd -P)/$(basename -- "$0")")
+SCRIPTPATH=$(exec 2>/dev/null;cd -- $(dirname "$0"); unset PWD; /usr/bin/pwd || /bin/pwd || pwd)
 
-cd $SCRIPTPATH/.. && pwd && git pull && cd $SCRIPTPATH
+cd $SCRIPTPATH &&  git pull
 
 read -p "Do? [y,n]" -n 1 doit
 case $doit in
