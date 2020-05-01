@@ -1,14 +1,19 @@
-newUser='test4'
-newDbPassword='test4'
-newDb='test4'
+newUser='test33'
+newDbPassword='test33'
+newDb='test33'
 #host=localhost
 host='%'
 
-commands='CREATE DATABASE '${newDb}';CREATE USER '${newUser}'@'${host}' IDENTIFIED BY '${newDbPassword}';GRANT USAGE ON *.* TO '${newUser}'@'${host}' IDENTIFIED BY '${newDbPassword}';GRANT ALL privileges ON '${newDb}'.*
-TO '${newUser}'@'${host}';FLUSH PRIVILEGES;'
+create_db="CREATE DATABASE \`${newDb}\`;"
+create_user="CREATE USER '${newUser}'@'${host}' IDENTIFIED BY '${newDbPassword}';"
+grant_usage='GRANT USAGE ON *.* TO \'${newUser}\'@\'${host}\' IDENTIFIED BY \'${newDbPassword}\';'
+grant_priv="GRANT ALL privileges ON \`${newDb}\`.*TO '${newUser}'@'${host}';"
+flush="FLUSH PRIVILEGES;"
 
-echo $commands
-echo ${commands} | /usr/bin/mysql -u root
+#commands="CREATE DATABASE \`${newDb}\`;CREATE USER '${newUser}'@'${host}' IDENTIFIED BY '${newDbPassword}';GRANT USAGE ON *.* TO '${newUser}'@'${host}' IDENTIFIED BY '${newDbPassword}';GRANT ALL privileges ON \`${newDb}\`.* TO '${newUser}'@'${host}';FLUSH PRIVILEGES;"
+
+echo $create_db$create_user$grant_usage$grant_priv$flush
+echo $create_db$create_user$grant_usage$grant_priv$flush | /usr/bin/mysql -u root
 
 #echo $commands
 
