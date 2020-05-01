@@ -5,6 +5,8 @@ echo "developer	ALL=(ALL:ALL) NOPASSWD:ALL" > /etc/sudoers.d/developer
 
 DEVELOPER_PASSWD=`head /dev/urandom | tr -dc A-Za-z0-9 | head -c 13 ; echo ''`
 
+DEVELOPER_PASSWD='123456789'
+
 echo -e "$DEVELOPER_PASSWD\n$DEVELOPER_PASSWD" | passwd developer
 
 mkdir -p /home/developer/.ssh
